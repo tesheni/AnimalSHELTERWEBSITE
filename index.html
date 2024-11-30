@@ -20,11 +20,40 @@
             color: inherit;
         }
 
-        /* Navigation Bar */
+        /* Banner Section */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: #87CEEB; /* Sky blue */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-text {
+            color: white;
+            text-align: center;
+        }
+
+        .banner-text h1 {
+            font-size: 3.5em;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .banner-text p {
+            font-size: 1.4em;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        /* Navigation Bar (below banner) */
         nav {
             background-color: #ffffff;
             padding: 20px 40px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         nav ul {
@@ -54,34 +83,6 @@
             border-radius: 5px;
         }
 
-        /* Banner Section */
-        .banner {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            background-color: #87CEEB; /* Sky blue */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .banner-text {
-            color: white;
-            text-align: center;
-        }
-
-        .banner-text h1 {
-            font-size: 3.5em;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
-
-        .banner-text p {
-            font-size: 1.4em;
-            font-weight: 300;
-            margin-top: 10px;
-        }
-
         /* Pets Section */
         .pets-section {
             padding: 40px 20px;
@@ -94,6 +95,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
+            justify-content: center;
             text-align: center;
         }
 
@@ -158,27 +160,6 @@
             margin: 0;
         }
 
-        /* Friendly Message Section */
-        .friendly-message {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .friendly-message h2 {
-            font-size: 2.5em;
-            color: #ff6f61;
-        }
-
-        .friendly-message p {
-            font-size: 1.2em;
-            color: #555;
-            margin-top: 10px;
-        }
-
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .banner-text h1 {
@@ -201,21 +182,22 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#adopt">Adopt</a></li>
-        </ul>
-    </nav>
-
     <!-- Banner Section -->
-    <section class="banner" id="home">
+    <section class="banner">
         <div class="banner-text">
             <h1>Welcome to the Animal Adoption Center</h1>
             <p>Find your forever furry friend today!</p>
         </div>
     </section>
+
+    <!-- Navigation Bar (below the banner) -->
+    <nav>
+        <ul>
+            <li><a href="#adopt">Adopt</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- Pets Section -->
     <section class="pets-section" id="adopt">
@@ -259,12 +241,6 @@
         </div>
     </section>
 
-    <!-- Friendly Message Section -->
-    <section class="friendly-message">
-        <h2>Ready to Welcome a New Friend?</h2>
-        <p>We’re so excited to help you find your new furry family member! Browse through our pets and get in touch with us to start your adoption journey.</p>
-    </section>
-
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Animal Adoption Center | All Rights Reserved 🐶🐱</p>
@@ -272,3 +248,4 @@
 
 </body>
 </html>
+
