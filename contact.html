@@ -20,6 +20,34 @@
             color: inherit;
         }
 
+        /* Banner Section */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: #87CEEB; /* Sky blue */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-text {
+            color: white;
+            text-align: center;
+        }
+
+        .banner-text h1 {
+            font-size: 3.5em;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .banner-text p {
+            font-size: 1.4em;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
         /* Navigation Bar */
         nav {
             background-color: #ffffff;
@@ -110,6 +138,14 @@
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
+            .banner-text h1 {
+                font-size: 2.8em;
+            }
+
+            .banner-text p {
+                font-size: 1.2em;
+            }
+
             .contact-section h2 {
                 font-size: 2.4em;
             }
@@ -122,7 +158,15 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-text">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you!</p>
+        </div>
+    </section>
+
+    <!-- Navigation Bar (below the banner) -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -155,4 +199,5 @@
 
 </body>
 </html>
+
 
