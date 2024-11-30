@@ -3,112 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Animal Pet Adoption</title>
+    <title>Animal Adoption Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f8ff; /* Baby blue background */
+            color: #444;
         }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
+
+        a {
+            text-decoration: none;
+            color: inherit;
         }
+
+        /* Navigation Bar */
         nav {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
-            background-color: #444;
+            gap: 30px;
         }
+
+        nav li {
+            font-size: 1.2em;
+        }
+
         nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
+            color: #444;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            transition: background-color 0.3s, color 0.3s;
         }
+
         nav a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #ff6f61; /* Pinkish color */
+            color: white;
+            border-radius: 5px;
         }
-        .main-content {
+
+        /* Banner Section */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: #87CEEB; /* Sky blue */
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
+            justify-content: center;
+            align-items: center;
         }
-        .animal-card {
-            background-color: white;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 250px;
+
+        .banner-text {
+            color: white;
             text-align: center;
         }
-        .animal-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
+
+        .banner-text h1 {
+            font-size: 3.5em;
+            font-weight: 500;
+            letter-spacing: 1px;
         }
+
+        .banner-text p {
+            font-size: 1.4em;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        /* Pets Section */
+        .pets-section {
+            padding: 40px 20px;
+            background-color: #f0f8ff; /* Baby blue */
+        }
+
+        .pets-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .pet-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .pet-card:hover {
+            transform: scale(1.05);
+        }
+
+        .pet-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .pet-info {
+            padding: 15px;
+        }
+
+        .pet-info h3 {
+            font-size: 1.8em;
+            color: #ff6f61; /* Soft pink */
+        }
+
+        .pet-info p {
+            font-size: 1.1em;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .adopt-btn {
+            background-color: #ff6f61; /* Soft pink */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .adopt-btn:hover {
+            background-color: #ff3b2a; /* Darker pink */
+        }
+
+        /* Footer Section */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
+            padding: 20px;
+            font-size: 1em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Friendly Message Section */
+        .friendly-message {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .friendly-message h2 {
+            font-size: 2.5em;
+            color: #ff6f61;
+        }
+
+        .friendly-message p {
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .banner-text h1 {
+                font-size: 2.8em;
+            }
+
+            .banner-text p {
+                font-size: 1.2em;
+            }
+
+            .pet-info h3 {
+                font-size: 1.6em;
+            }
+
+            .pet-info p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to the PET ADOPTION CENTER</h1>
-        <p>Find your new best friend today!</p>
-    </header>
-
+    <!-- Navigation Bar -->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="adoptsection.html">Adopt</a>
-        <a href="aboutUS.html">About Us</a>
-        <a href="contact.html">Contact</a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#adopt">Adopt</a></li>
+        </ul>
     </nav>
 
-    <div class="main-content" id="adopt">
-        <div class="animal-card">
-            <img src="https://via.placeholder.com/200" alt="Adoptable Dog">
-            <h3>Max</h3>
-            <p>Breed: Labrador</p>
-            <p>Age: 3 years</p>
-            <p>Max is friendly, playful, and looking for a loving home.</p>
-            <button>Adopt Max</button>
+    <!-- Banner Section -->
+    <section class="banner" id="home">
+        <div class="banner-text">
+            <h1>Welcome to the Animal Adoption Center</h1>
+            <p>Find your forever furry friend today!</p>
         </div>
-        <div class="animal-card">
-            <img src="https://via.placeholder.com/200" alt="Adoptable Cat">
-            <h3>Whiskers</h3>
-            <p>Breed: Siamese</p>
-            <p>Age: 2 years</p>
-            <p>Whiskers is affectionate and loves attention!</p>
-            <button>Adopt Whiskers</button>
-        </div>
-        <div class="animal-card">
-            <img src="https://via.placeholder.com/200" alt="Adoptable Rabbit">
-            <h3>Bunny</h3>
-            <p>Breed: Mini Lop</p>
-            <p>Age: 1 year</p>
-            <p>Bunny is calm and enjoys cuddles.</p>
-            <button>Adopt Bunny</button>
-        </div>
-    </div>
+    </section>
 
+    <!-- Pets Section -->
+    <section class="pets-section" id="adopt">
+        <div class="pets-container">
+            <!-- Pet Card 1 -->
+            <div class="pet-card">
+                <div class="pet-image">
+                    <img src="pet1.jpg" alt="Adoptable Pet 1">
+                </div>
+                <div class="pet-info">
+                    <h3>Max the Puppy</h3>
+                    <p>Age: 6 months</p>
+                    <p>Max is a playful and affectionate puppy, ready for his forever home!</p>
+                    <button class="adopt-btn">Adopt Max</button>
+                </div>
+            </div>
+            <!-- Pet Card 2 -->
+            <div class="pet-card">
+                <div class="pet-image">
+                    <img src="pet2.jpg" alt="Adoptable Pet 2">
+                </div>
+                <div class="pet-info">
+                    <h3>Luna the Cat</h3>
+                    <p>Age: 2 years</p>
+                    <p>Luna is a calm and loving cat who loves to cuddle and be around people.</p>
+                    <button class="adopt-btn">Adopt Luna</button>
+                </div>
+            </div>
+            <!-- Pet Card 3 -->
+            <div class="pet-card">
+                <div class="pet-image">
+                    <img src="pet3.jpg" alt="Adoptable Pet 3">
+                </div>
+                <div class="pet-info">
+                    <h3>Buddy the Rabbit</h3>
+                    <p>Age: 1 year</p>
+                    <p>Buddy is a curious and friendly bunny who loves exploring and playing.</p>
+                    <button class="adopt-btn">Adopt Buddy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Friendly Message Section -->
+    <section class="friendly-message">
+        <h2>Ready to Welcome a New Friend?</h2>
+        <p>We’re so excited to help you find your new furry family member! Browse through our pets and get in touch with us to start your adoption journey.</p>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Animal Shelter. All Rights Reserved.</p>
+        <p>&copy; 2024 Animal Adoption Center | All Rights Reserved 🐶🐱</p>
     </footer>
 
 </body>
 </html>
-
