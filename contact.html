@@ -20,114 +20,79 @@
             color: inherit;
         }
 
-        /* Banner Section */
-        .banner {
-            position: relative;
-            width: 100%;
-            height: 350px;
-            background-color: #87CEEB; /* Sky blue background for banner */
+        /* Navigation Bar */
+        nav {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            gap: 30px;
         }
 
-        .banner-text {
-            color: white;
-            text-align: center;
+        nav li {
+            font-size: 1.2em;
         }
 
-        .banner-text h1 {
-            font-size: 3.5em;
+        nav a {
+            color: #444;
             font-weight: 500;
-            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        .banner-text p {
-            font-size: 1.4em;
-            font-weight: 300;
-            margin-top: 10px;
+        nav a:hover {
+            background-color: #ff6f61; /* Pinkish color */
+            color: white;
+            border-radius: 5px;
         }
 
         /* Contact Section */
-        .contact-info {
+        .contact-section {
             padding: 40px 20px;
-            background-color: #f0f8ff; /* Baby blue background */
+            background-color: #f0f8ff; /* Baby blue */
         }
 
         .contact-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             max-width: 1200px;
             margin: 0 auto;
-            flex-wrap: wrap;
+            text-align: center;
         }
 
-        .contact-image {
-            flex: 1;
-            padding-right: 20px;
-        }
-
-        .contact-image img {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-text {
-            flex: 2;
-            padding-left: 20px;
-        }
-
-        .contact-text h2 {
+        h2 {
             font-size: 2.8em;
             font-weight: 500;
-            color: #ff6f61; /* Cute pinkish color */
-            margin-bottom: 15px;
+            color: #ff6f61; /* Soft pink */
+            margin-bottom: 20px;
         }
 
-        .contact-text p {
+        p {
             font-size: 1.2em;
             line-height: 1.6;
             color: #555;
+            margin-bottom: 30px;
         }
 
-        .contact-details {
+        .contact-info ul {
             list-style-type: none;
             padding: 0;
-            margin: 20px 0;
-        }
-
-        .contact-details li {
             font-size: 1.2em;
-            margin: 10px 0;
+            text-align: center;
         }
 
-        .testimonial {
-            background-color: #fff5f0; /* Soft pink background */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
+        .contact-info li {
+            margin: 15px 0;
         }
 
-        .testimonial h3 {
-            font-size: 1.8em;
-            color: #ff6f61;
-        }
-
-        .testimonial p {
-            font-size: 1.1em;
-            font-style: italic;
-            color: #555;
-        }
-
-        .testimonial p:last-child {
-            font-size: 1.1em;
-            font-weight: bold;
-            text-align: right;
-            color: #ff6f61;
+        .contact-info strong {
+            color: #ff6f61; /* Soft pink */
         }
 
         /* Footer Section */
@@ -145,54 +110,40 @@
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .contact-container {
-                flex-direction: column;
-                text-align: center;
+            .contact-section h2 {
+                font-size: 2.4em;
             }
 
-            .contact-image {
-                padding-right: 0;
-            }
-
-            .contact-text {
-                padding-left: 0;
+            .contact-info ul {
+                font-size: 1em;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Banner Section -->
-    <header class="banner">
-        <div class="banner-text">
-            <h1>Contact Us!</h1>
-            <p>Let’s find your perfect furry friend today!</p>
-        </div>
-    </header>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#adopt">Adopt</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- Contact Section -->
-    <section class="contact-info">
+    <section class="contact-section" id="contact">
         <div class="contact-container">
-            <!-- Contact Image -->
-            <div class="contact-image">
-                <img src="your-image.jpg" alt="Cute Animal" class="animal-image">
-            </div>
-            <!-- Contact Text and Details -->
-            <div class="contact-text">
-                <h2>We'd Love to Hear From You!</h2>
-                <p>If you have any questions or want to know more about adoption, just drop us a message!</p>
-                <ul class="contact-details">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need more information, don’t hesitate to get in touch with us. We’d love to hear from you!</p>
+
+            <div class="contact-info">
+                <ul>
                     <li><strong>Phone:</strong> (123) 456-7890</li>
                     <li><strong>Email:</strong> contact@animaladoptcenter.com</li>
                     <li><strong>Address:</strong> 123 Pet Street, Animal Town, AT 12345</li>
                 </ul>
-                
-                <!-- Testimonial Section -->
-                <div class="testimonial">
-                    <h3>What Our Customers Are Saying</h3>
-                    <p>"Adopting from the Animal Adoption Center changed our lives. Our new puppy, Max, has brought so much joy to our family. Thank you for giving us the opportunity to make a difference in his life!"</p>
-                    <p>- Sarah & Tom L.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -204,3 +155,4 @@
 
 </body>
 </html>
+
