@@ -94,11 +94,21 @@
             text-align: center;
         }
 
-        h2 {
+        /* Contact Heading (Logo + Text) */
+        .contact-heading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px; /* Adjust space between logo and text */
             font-size: 2.8em;
             font-weight: 500;
             color: #ff6f61; /* Soft pink */
             margin-bottom: 20px;
+        }
+
+        .contact-logo {
+            width: 50px; /* Adjust the size of the logo */
+            height: auto;
         }
 
         p {
@@ -179,7 +189,10 @@
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="contact-container">
-            <h2>Contact Us</h2>
+            <h2 class="contact-heading">
+                <img src="assets/logoSECOND.png" alt="Animal Adoption Center Logo" class="contact-logo"> <!-- Add your logo here -->
+                Contact Us
+            </h2>
             <p>If you have any questions or need more information, don’t hesitate to get in touch with us. We’d love to hear from you!</p>
 
             <div class="contact-info">
@@ -199,5 +212,3 @@
 
 </body>
 </html>
-
-
