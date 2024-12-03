@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emotional Support Pets - Animal Adoption Center</title>
+    <title>Emotional Support Pets</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
@@ -13,342 +13,302 @@
             padding: 0;
             background-color: #f0f8ff;
             color: #444;
-            display: flex;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Banner Section */
-        .banner {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            background-color: #ff6f61;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .banner-text {
-            color: white;
-            text-align: center;
-        }
-
-        .banner-text h1 {
-            font-size: 3.5em;
-            font-weight: 500;
-        }
-
-        .banner-text p {
-            font-size: 1.4em;
-            margin-top: 10px;
-        }
-
-        /* Bottom Navigation Bar */
-        .bottom-nav {
-            background-color: #ffffff;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .bottom-nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .bottom-nav li {
-            font-size: 1.2em;
-        }
-
-        .bottom-nav a {
-            color: #444;
-            font-weight: 500;
-            padding: 8px 20px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .bottom-nav a:hover {
-            background-color: #ff6f61;
-            color: white;
-            border-radius: 5px;
-        }
-
-        /* Sidebar Navigation */
+        /* Side Navigation Bar */
         .side-nav {
+            height: 100%;
+            width: 220px; /* Reduced size */
             position: fixed;
             top: 0;
             left: 0;
-            width: 200px;
-            background-color: #f0f8ff;
-            padding-top: 60px;
-            height: 100%;
-            z-index: 2;
-        }
-
-        .side-nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .side-nav li {
-            padding: 15px;
-            text-align: center;
-            font-size: 1.2em;
+            background-color: #333;
+            padding-top: 20px;
+            color: white;
+            font-size: 0.9em; /* Smaller font size */
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .side-nav a {
-            color: #444;
-            font-weight: 500;
-            text-transform: uppercase;
-            padding: 8px 20px;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: white;
             display: block;
+            transition: 0.3s;
+            font-size: 0.9em;
         }
 
         .side-nav a:hover {
             background-color: #ff6f61;
             color: white;
-            border-radius: 5px;
         }
 
-        /* Main Content Section */
+        /* Banner Section */
+        .banner {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #87CEEB;
+            color: white;
+        }
+
+        .banner h1 {
+            font-size: 2.8em; /* Smaller font size */
+        }
+
+        .banner p {
+            font-size: 1.2em; /* Smaller font size */
+        }
+
+        /* Main Content */
         .content {
-            margin-left: 220px;
-            padding: 40px 20px;
-            flex: 1;
+            margin-left: 240px;
+            padding: 30px;
+        }
+
+        /* Categories Section */
+        .category-box {
+            margin-bottom: 40px;
+        }
+
+        .category-box h3 {
+            font-size: 1.8em; /* Smaller font size */
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        .category-box p {
+            font-size: 1em; /* Smaller font size */
+            color: #555;
         }
 
         /* Blurb Section */
         .blurb {
-            background-color: #fff;
+            margin: 30px 0;
             padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 1.2em;
+            color: #555;
         }
 
         .blurb h2 {
+            color: #ff6f61;
             font-size: 2em;
-            color: #ff6f61;
         }
 
-        .blurb p {
-            font-size: 1.1em;
-            color: #555;
-            margin-top: 10px;
-        }
-
-        /* Categories Section */
-        .categories-section {
-            padding: 40px 0;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .category-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .category-box {
-            width: 30%;
-            padding: 20px;
-            text-align: center;
-            background-color: #f0f8ff;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
-        }
-
-        .category-box h3 {
-            color: #ff6f61;
-            font-size: 1.8em;
-        }
-
-        .category-box p {
-            font-size: 1.1em;
-            color: #555;
-            margin: 10px 0;
-        }
-
-        /* Pet Cards inside each category */
+        /* Pet Card Container */
         .pet-card-container {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px;
+            justify-content: flex-start;
         }
 
         .pet-card {
-            width: 45%; /* Adjust width to 45% to leave space between images */
+            width: calc(33.33% - 10px);
             background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .pet-card:hover {
-            transform: scale(1.05);
+            text-align: center;
         }
 
         .pet-card img {
             width: 100%;
-            height: auto; /* Make sure the image scales properly */
+            height: 200px; /* Reduced size */
             object-fit: cover;
         }
 
-        .pet-card .pet-info {
-            padding: 15px;
+        .pet-info {
+            padding: 10px;
         }
 
-        .pet-card .pet-info h4 {
-            color: #ff6f61;
-            font-size: 1.5em;
+        .pet-info h4 {
+            font-size: 1.2em; /* Smaller font size */
+            color: #333;
         }
 
-        .pet-card .pet-info p {
-            font-size: 1.1em;
-            color: #555;
+        .pet-info p {
+            font-size: 0.9em; /* Smaller font size */
+            color: #666;
         }
 
-        /* Button Style */
-        .category-btn {
-            background-color: #ff6f61;
+        /* Footer */
+        footer {
+            background-color: #333;
             color: white;
-            padding: 10px 20px;
-            border: none;
-            font-size: 1.1em;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em; /* Smaller font size */
         }
 
-        .category-btn:hover {
-            background-color: #ff3b2a;
+        footer p {
+            margin: 0;
         }
 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .side-nav {
+                width: 180px;
+            }
+
+            .banner h1 {
+                font-size: 2.2em;
+            }
+
+            .banner p {
+                font-size: 1em;
+            }
+
+            .pet-card {
+                width: calc(50% - 10px);
+            }
+
+            .pet-info h4 {
+                font-size: 1.1em;
+            }
+
+            .pet-info p {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .side-nav {
+                width: 150px;
+            }
+
+            .banner h1 {
+                font-size: 1.8em;
+            }
+
+            .banner p {
+                font-size: 0.9em;
+            }
+
+            .pet-card {
+                width: calc(100% - 10px);
+            }
+
+            .pet-info h4 {
+                font-size: 1em;
+            }
+
+            .pet-info p {
+                font-size: 0.8em;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Sidebar Navigation -->
+    <!-- Side Navigation Bar -->
     <div class="side-nav">
-        <ul>
-            <li><a href="medical.html">Medical</a></li>
-            <li><a href="emotional.html">Emotional</a></li>
-            <li><a href="environment.html">Environment</a></li>
-        </ul>
+        <a href="medical.html">Medical</a>
+        <a href="environment.html">Environment</a>
+        <a href="emotional.html">Emotional</a>
     </div>
 
     <!-- Main Content -->
     <div class="content">
+
         <!-- Banner Section -->
-        <section class="banner">
-            <div class="banner-text">
-                <h1>Adopt Emotional Support Pets</h1>
-                <p>Pets to help you navigate mental health challenges like anxiety, depression, and loneliness.</p>
-            </div>
-        </section>
+        <div class="banner">
+            <h1>Emotional Support Pets</h1>
+            <p>Discover pets that can provide emotional support and companionship.</p>
+        </div>
 
-        <!-- Short Explanation Blurb -->
-        <section class="blurb">
-            <h2>Why Adopt Emotional Support Pets?</h2>
-            <p>Pets can offer unparalleled emotional support to individuals facing mental health struggles. Whether you're dealing with anxiety, depression, or loneliness, a furry companion can provide comfort, companionship, and a sense of calm. Pets such as dogs, cats, and even rabbits can become part of your healing journey, offering unconditional love and support through tough times. By adopting an emotional support animal, you're not only giving them a home but also gaining a partner in emotional well-being.</p>
-        </section>
+        <!-- Emotional Support Blurb Section -->
+        <div class="blurb">
+            <h2>Why Emotional Support Pets?</h2>
+            <p>Many people struggle with mental health challenges, such as anxiety, depression, or loneliness. Emotional support animals are known to help alleviate these conditions by providing comfort, companionship, and a sense of security. Whether you're dealing with stressful situations or simply want to feel more connected, an emotional support pet can offer a therapeutic presence in your life.</p>
+        </div>
 
-        <!-- Categories Section -->
-        <section class="categories-section">
-            <div class="category-container">
-                <!-- Anxiety Relief Pets Category -->
-                <div class="category-box">
-                    <h3>Anxiety Relief Pets</h3>
-                    <p>Pets can help calm anxiety and create a sense of stability. Find pets that thrive in providing emotional comfort during stressful times.</p>
-                    <div class="pet-card-container">
-                        <!-- Pet 1 -->
-                        <div class="pet-card">
-                            <img src="assets/anxiety-pet1.jpg" alt="Anxiety Relief Pet 1">
-                            <div class="pet-info">
-                                <h4>Max the Labrador</h4>
-                                <p>Age: 4 years</p>
-                                <p>Max is known for his calming presence and loves to cuddle.</p>
-                            </div>
-                        </div>
-                        <!-- Pet 2 -->
-                        <div class="pet-card">
-                            <img src="assets/anxiety-pet2.jpg" alt="Anxiety Relief Pet 2">
-                            <div class="pet-info">
-                                <h4>Lucy the Golden Retriever</h4>
-                                <p>Age: 3 years</p>
-                                <p>Lucy is friendly and loves to be around people, easing anxiety with her gentle nature.</p>
-                            </div>
-                        </div>
+        <!-- Anxiety Relief Pets Section -->
+        <section class="category-box">
+            <h3>Anxiety Relief Pets</h3>
+            <p>Pets can be great for relieving anxiety. Their calming presence can help individuals feel more relaxed and centered. Find pets that are especially suited for helping ease anxiety.</p>
+            <div class="pet-card-container">
+                <!-- Pet 1 -->
+                <div class="pet-card">
+                    <img src="assets/anxiety-pet1.jpg" alt="Anxiety Relief Pet 1">
+                    <div class="pet-info">
+                        <h4>Max the Labrador</h4>
+                        <p>Age: 4 years</p>
+                        <p>Max is known for his calming presence and loves to cuddle.</p>
                     </div>
                 </div>
-
-                <!-- Loneliness Companion Pets Category -->
-                <div class="category-box">
-                    <h3>Loneliness Companion Pets</h3>
-                    <p>Companionship is essential for overcoming loneliness. These pets are great for providing comfort and company.</p>
-                    <div class="pet-card-container">
-                        <!-- Pet 1 -->
-                        <div class="pet-card">
-                            <img src="assets/loneliness-pet1.jpg" alt="Loneliness Companion Pet 1">
-                            <div class="pet-info">
-                                <h4>Charlie the Cat</h4>
-                                <p>Age: 5 years</p>
-                                <p>Charlie is an affectionate cat who loves being close to his humans.</p>
-                            </div>
-                        </div>
-                        <!-- Pet 2 -->
-                        <div class="pet-card">
-                            <img src="assets/loneliness-pet2.jpg" alt="Loneliness Companion Pet 2">
-                            <div class="pet-info">
-                                <h4>Sammy the Parrot</h4>
-                                <p>Age: 2 years</p>
-                                <p>Sammy loves interaction and can become your perfect companion!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Depression Support Pets Category -->
-                <div class="category-box">
-                    <h3>Depression Support Pets</h3>
-                    <p>Pets provide a sense of routine and purpose, which is essential for anyone struggling with depression.</p>
-                    <div class="pet-card-container">
-                        <!-- Pet 1 -->
-                        <div class="pet-card">
-                            <img src="assets/depression-pet1.jpg" alt="Depression Support Pet 1">
-                            <div class="pet-info">
-                                <h4>Bella the Rabbit</h4>
-                                <p>Age: 3 years</p>
-                                <p>Bella is a gentle and loving rabbit who enjoys spending time with people.</p>
-                            </div>
-                        </div>
-                        <!-- Pet 2 -->
-                        <div class="pet-card">
-                            <img src="assets/depression-pet2.jpg" alt="Depression Support Pet 2">
-                            <div class="pet-info">
-                                <h4>Gizmo the Guinea Pig</h4>
-                                <p>Age: 2 years</p>
-                                <p>Gizmo is a playful and comforting companion.</p>
-                            </div>
-                        </div>
+                <!-- Pet 2 -->
+                <div class="pet-card">
+                    <img src="assets/anxiety-pet2.jpg" alt="Anxiety Relief Pet 2">
+                    <div class="pet-info">
+                        <h4>Lucy the Golden Retriever</h4>
+                        <p>Age: 3 years</p>
+                        <p>Lucy is friendly and loves to be around people, easing anxiety with her gentle nature.</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Loneliness Companion Pets Section -->
+        <section class="category-box">
+            <h3>Loneliness Companion Pets</h3>
+            <p>Companionship is essential for overcoming loneliness. These pets are great for providing comfort and company when you're feeling isolated.</p>
+            <div class="pet-card-container">
+                <!-- Pet 1 -->
+                <div class="pet-card">
+                    <img src="assets/loneliness-pet1.jpg" alt="Loneliness Companion Pet 1">
+                    <div class="pet-info">
+                        <h4>Charlie the Cat</h4>
+                        <p>Age: 5 years</p>
+                        <p>Charlie is an affectionate cat who loves being close to his humans.</p>
+                    </div>
+                </div>
+                <!-- Pet 2 -->
+                <div class="pet-card">
+                    <img src="assets/loneliness-pet2.jpg" alt="Loneliness Companion Pet 2">
+                    <div class="pet-info">
+                        <h4>Sammy the Parrot</h4>
+                        <p>Age: 2 years</p>
+                        <p>Sammy loves interaction and can become your perfect companion!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depression Support Pets Section -->
+        <section class="category-box">
+            <h3>Depression Support Pets</h3>
+            <p>Pets provide a sense of routine and purpose, which is essential for anyone struggling with depression. Their love and care can help improve emotional well-being.</p>
+            <div class="pet-card-container">
+                <!-- Pet 1 -->
+                <div class="pet-card">
+                    <img src="assets/depression-pet1.jpg" alt="Depression Support Pet 1">
+                    <div class="pet-info">
+                        <h4>Bella the Rabbit</h4>
+                        <p>Age: 3 years</p>
+                        <p>Bella is a gentle and loving rabbit who enjoys spending time with people.</p>
+                    </div>
+                </div>
+                <!-- Pet 2 -->
+                <div class="pet-card">
+                    <img src="assets/depression-pet2.jpg" alt="Depression Support Pet 2">
+                    <div class="pet-info">
+                        <h4>Gizmo the Guinea Pig</h4>
+                        <p>Age: 2 years</p>
+                        <p>Gizmo is a playful and comforting companion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Animal Adoption Center | All Rights Reserved 🐶🐱</p>
+    </footer>
 
 </body>
 </html>
-
