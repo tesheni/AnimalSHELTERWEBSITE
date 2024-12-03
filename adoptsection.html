@@ -1,1 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Pet | Hope For Paws</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Baby blue background */
+            color: #444;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+        }
+
+        /* Banner Section */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: #87CEEB; /* Sky blue */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-text {
+            color: white;
+            text-align: center;
+        }
+
+        .banner-text h1 {
+            font-size: 3.5em;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .banner-text p {
+            font-size: 1.4em;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        /* Top Navigation Bar (below banner) */
+        nav {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav li {
+            font-size: 1.2em;
+        }
+
+        nav a {
+            color: #444;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ff6f61; /* Pinkish color */
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Side Navigation Bar */
+        .side-nav {
+            width: 200px;
+            background-color: #ffffff;
+            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 80px;
+            left: 0;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+        .side-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .side-nav li {
+            margin: 20px 0;
+        }
+
+        .side-nav a {
+            font-size: 1.2em;
+            color: #444;
+            font-weight: 400;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .side-nav a:hover {
+            background-color: #ff6f61;
+            color: white;
+        }
+
+        /* Pets Section */
+        .pets-section {
+            padding: 40px 20px;
+            background-color: #f0f8ff; /* Baby blue */
+            margin-left: 220px; /* Offset for side nav */
+            width: 100%;
+        }
+
+        .pets-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .pet-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .pet-card:hover {
+            transform: scale(1.05);
+        }
+
+        .pet-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .pet-info {
+            padding: 15px;
+        }
+
+        .pet-info h3 {
+            font-size: 1.8em;
+            color: #ff6f61; /* Soft pink */
+        }
+
+        .pet-info p {
+            font-size: 1.1em;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .adopt-btn {
+            background-color: #ff6f61; /* Soft pink */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .adopt-btn:hover {
+            background-color: #ff3b2a; /* Darker pink */
+        }
+
+        /* Friendly Reminder Section */
+        .friendly-reminder {
+            background-color: #fffbf1; /* Light yellowish background */
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #444;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        .friendly-reminder h3 {
+            font-size: 1.6em;
+            color: #ff6f61; /* Soft pink */
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .banner-text h1 {
+                font-size: 2.8em;
+            }
+
+            .banner-text p {
+                font-size: 1.2em;
+            }
+
+            .pet-info h3 {
+                font-size: 1.6em;
+            }
+
+            .pet-info p {
+                font-size: 1em;
+            }
+
+            .side-nav {
+                position: relative;
+                width: 100%;
+                top: 0;
+                padding-left: 10px;
+            }
+
+            .pets-section {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-text">
+            <h1>Adopt a Pet</h1>
+            <p>Find your forever furry friend today!</p>
+        </div>
+    </section>
+
+    <!-- Top Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#adopt">Adopt</a></li>
+            <li><a href="aboutUS.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Side Navigation Bar -->
+        <aside class="side-nav">
+            <ul>
+                <li><a href="#medical">Medical</a></li>
+                <li><a href="#emotional">Emotional</a></li>
+                <li><a href="#environment">Environment Friendly</a></li>
+            </ul>
+        </aside>
+
+        <!-- Adopt Section -->
+        <section class="pets-section" id="adopt">
+            <div class="pets-container">
+                <!-- Pet Card 1 -->
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="assets/max.jpg" alt="Max the Puppy">
+                    </div>
+                    <div class="pet-info">
+                        <h3>Max the Puppy</h3>
+                        <p>Age: 6 months</p>
+                        <p>Max is very energetic, ready for his forever home!</p>
+                        <button class="adopt-btn">Adopt Max</button>
+                    </div>
+                </div>
+
+                <!-- Pet Card 2 -->
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="assets/jellybean.jpg" alt="Jelly Bean the Cat">
+                    </div>
+                    <div class="pet-info">
+                        <h3>Jelly Bean the Cat</h3>
+                        <p>Age: 2 years</p>
+                        <p>Jelly Bean is a calm and loving cat who loves to cuddle and be around people.</p>
+                        <button class="adopt-btn">Adopt Jelly Bean</button>
+                    </div>
+                </div>
+
+                <!-- Pet Card 3 -->
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="assets/bunnyMYA.webp" alt="Mya Snow Bun">
+                    </div>
+                    <div class="pet-info">
+                        <h3>Mya Snow Bun</h3>
+                        <p>Age: 1 year</p>
+                        <p>Mya is a curious and friendly bunny who loves exploring and playing.</p>
+                        <button class="adopt-btn">Adopt Mya</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Friendly Reminder Section -->
+    <section class="friendly-reminder">
+        <h3>Thinking about adopting? It's a life-changing decision for both you and the pet!</h3>
+        <p>Visit our Adoption page for more details and find your perfect companion today!</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Hope For Paws | All Rights Reserved 🐶🐱</p>
+    </footer>
+
+</body>
+</html>
 
