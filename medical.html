@@ -1,1 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Pets - Animal Adoption Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #444;
+            display: flex;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Banner Section */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: #87CEEB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-text {
+            color: white;
+            text-align: center;
+        }
+
+        .banner-text h1 {
+            font-size: 3.5em;
+            font-weight: 500;
+        }
+
+        .banner-text p {
+            font-size: 1.4em;
+            margin-top: 10px;
+        }
+
+        /* Bottom Navigation Bar */
+        .bottom-nav {
+            background-color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .bottom-nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .bottom-nav li {
+            font-size: 1.2em;
+        }
+
+        .bottom-nav a {
+            color: #444;
+            font-weight: 500;
+            padding: 8px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .bottom-nav a:hover {
+            background-color: #ff6f61;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Sidebar Navigation */
+        .side-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            background-color: #f0f8ff;
+            padding-top: 60px;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .side-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .side-nav li {
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .side-nav a {
+            color: #444;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            display: block;
+        }
+
+        .side-nav a:hover {
+            background-color: #ff6f61;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Main Content Section */
+        .content {
+            margin-left: 220px;
+            padding: 40px 20px;
+            flex: 1;
+        }
+
+        .blurb {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .blurb h2 {
+            font-size: 2em;
+            color: #ff6f61;
+        }
+
+        .blurb p {
+            font-size: 1.1em;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .pets-section {
+            padding: 40px 20px;
+        }
+
+        .pets-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .pet-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .pet-card:hover {
+            transform: scale(1.05);
+        }
+
+        .pet-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .pet-info {
+            padding: 15px;
+        }
+
+        .pet-info h3 {
+            font-size: 1.8em;
+            color: #ff6f61;
+        }
+
+        .pet-info p {
+            font-size: 1.1em;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .adopt-btn {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .adopt-btn:hover {
+            background-color: #ff3b2a;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="side-nav">
+        <ul>
+            <li><a href="medical.html">Medical</a></li>
+            <li><a href="emotional.html">Emotional</a></li>
+            <li><a href="environment.html">Environment</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Banner Section -->
+        <section class="banner">
+            <div class="banner-text">
+                <h1>Adopt Pets with Medical Needs</h1>
+                <p>Give them a second chance at life.</p>
+            </div>
+        </section>
+
+        <!-- Short Explanation Blurb -->
+        <section class="blurb">
+            <h2>Why Adopt Pets with Medical Needs?</h2>
+            <p>Many pets in our care require medical attention and special care, just like humans do. By adopting a pet with medical needs, you can provide them with the love, attention, and medical care they need to live a happy life. It’s a rewarding experience that can transform both your life and theirs.</p>
+        </section>
+
+        <!-- Pets Section -->
+        <section class="pets-section">
+            <div class="pets-container">
+                <!-- Pet Card 1 -->
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="assets/med-pet1.jpg" alt="Pet 1">
+                    </div>
+                    <div class="pet-info">
+                        <h3>Lucy the Labrador</h3>
+                        <p>Age: 4 years</p>
+                        <p>Lucy needs ongoing treatment for her arthritis. She's sweet and loving!</p>
+                        <button class="adopt-btn">Adopt Lucy</button>
+                    </div>
+                </div>
+
+                <!-- Pet Card 2 -->
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="assets/med-pet2.jpg" alt="Pet 2">
+                    </div>
+                    <div class="pet-info">
+                        <h3>Charlie the Cat</h3>
+                        <p>Age: 2 years</p>
+                        <p>Charlie has a heart condition that requires medication. He's very affectionate!</p>
+                        <button class="adopt-btn">Adopt Charlie</button>
+                    </div>
+                </div>
+
+                <!-- Pet Card 3 -->
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="assets/med-pet3.jpg" alt="Pet 3">
+                    </div>
+                    <div class="pet-info">
+                        <h3>Max the Beagle</h3>
+                        <p>Age: 5 years</p>
+                        <p>Max has diabetes but is still very energetic and loves playtime!</p>
+                        <button class="adopt-btn">Adopt Max</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
+
 
