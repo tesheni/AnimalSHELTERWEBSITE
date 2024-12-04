@@ -4,70 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Animal Adoption Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
-            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f0f8ff; /* Light baby blue background */
-            color: #333;
+            color: #444;
         }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Section */
         header {
-            background-color: #87CEFA; /* Sky blue */
+            background-color: #ff6f61; /* Soft pink */
             color: white;
             text-align: center;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin: 0;
         }
+
+        /* Navigation Bar */
         nav {
             margin-top: 1rem;
-            background-color: #4682B4; /* Steel blue */
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
             justify-content: center;
+            gap: 30px;
         }
+
         nav ul li {
-            margin: 0 1rem;
+            margin: 0;
         }
+
         nav ul li a {
             text-decoration: none;
-            color: white;
+            color: #444;
             font-size: 1.2rem;
-            padding: 0.5rem 1rem;
+            padding: 1rem 1.5rem;
             display: inline-block;
-            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: background-color 0.3s, color 0.3s;
         }
+
         nav ul li a:hover {
-            background-color: #5A9BD4; /* Lighter blue hover effect */
+            background-color: #ff6f61; /* Soft pink */
+            color: white;
             border-radius: 5px;
         }
+
+        /* Main Content Section */
         main {
-            padding: 2rem;
+            padding: 2rem 20px;
         }
+
         section {
             margin-bottom: 2rem;
         }
+
         h2 {
-            color: #4682B4; /* Steel blue */
+            color: #ff6f61; /* Soft pink */
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer Section */
         footer {
+            background-color: #333;
+            color: white;
             text-align: center;
             padding: 1rem 0;
-            font-size: 0.9rem;
-            color: #666;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul li a {
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
         <h1>About Us</h1>
         <nav>
@@ -78,26 +149,35 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Main Content Section -->
     <main>
         <section id="our-mission">
             <h2>Our Mission</h2>
-            <p>At Happy Paws, our mission is to provide loving homes for animals in need. We believe every animal deserves a second chance at life and a forever family.</p>
+            <p>At Animal Adoption Center, our mission is to provide loving homes for animals in need. We believe every animal deserves a second chance at life and a forever family.</p>
         </section>
+        
         <section id="about-us">
             <h2>About Us</h2>
-            <p>Founded in 2010, Happy Paws Animal Adoption Center is a non-profit organization dedicated to rescuing and rehoming abandoned, abused, and stray animals. We work tirelessly to provide shelter, medical care, and love to our furry friends.</p>
+            <p>Founded in 2010, Animal Adoption Center is a non-profit organization dedicated to rescuing and rehoming abandoned, abused, and stray animals. We work tirelessly to provide shelter, medical care, and love to our furry friends.</p>
         </section>
+
         <section id="our-team">
             <h2>Meet Our Team</h2>
             <p>Our dedicated team of volunteers and staff is passionate about animal welfare. From veterinarians to caretakers, each member plays a vital role in ensuring the well-being of our animals.</p>
         </section>
+
         <section id="how-to-help">
             <h2>How You Can Help</h2>
             <p>You can support our cause by adopting, donating, or volunteering. Every contribution helps us save lives and give animals the love they deserve.</p>
         </section>
     </main>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Happy Paws Animal Adoption Center</p>
+        <p>&copy; 2024 Animal Adoption Center | All Rights Reserved 🐶🐱</p>
     </footer>
+
 </body>
 </html>
+
